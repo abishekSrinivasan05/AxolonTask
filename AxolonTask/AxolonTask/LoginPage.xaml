@@ -1,0 +1,54 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AxolonTask.LoginPage"
+             BackgroundColor="Azure">
+ 
+    <ContentPage.Content>
+        <StackLayout Padding="40" VerticalOptions="Center" HorizontalOptions="FillAndExpand">
+            <Image Source="AxolonLogo.png" WidthRequest="150" HeightRequest="150"></Image>
+            <Grid VerticalOptions="CenterAndExpand" Margin="20,0,20,0" >
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"></RowDefinition>
+                    <RowDefinition Height="Auto"></RowDefinition>
+                    <RowDefinition Height="Auto"></RowDefinition>
+                    <RowDefinition Height="Auto"></RowDefinition>
+                    <RowDefinition Height="Auto"></RowDefinition>
+                    <RowDefinition Height="Auto"></RowDefinition>
+                    <RowDefinition Height="Auto"></RowDefinition>
+                    <RowDefinition Height="Auto"></RowDefinition>
+                    <RowDefinition Height="Auto"></RowDefinition>
+                    <RowDefinition Height="Auto"></RowDefinition>
+                </Grid.RowDefinitions>
+                <StackLayout Grid.Row="1">
+                    <Entry x:Name="usernameEntry" Placeholder="Username" TextColor="Black" PlaceholderColor="#004296" FontSize="Small"></Entry>
+                </StackLayout>
+                <StackLayout Grid.Row="3">
+                    <Entry x:Name="passwordEntry" IsPassword="True" Placeholder="Password" TextColor="Black" PlaceholderColor="#004296" FontSize="Small"></Entry>
+                </StackLayout>
+                <StackLayout Grid.Row="5">
+                    <Button VerticalOptions="Center"
+                    Text="Login"
+                    TextColor="White"
+                    BackgroundColor="#004296"
+                    BorderColor="Black"
+                    BorderWidth="1.5"
+                    CornerRadius="50"
+                    Clicked="LoginButton_Clicked">
+                    </Button>
+                    <Label x:Name="registerLabel" HorizontalOptions="Center">
+                        <Label.FormattedText>
+                            <FormattedString>
+                                <Span Text="New to Axolon?" TextColor="Black"/>
+                                <Span Text="Register" TextColor="#004296" FontAttributes="Bold" TextDecorations="Underline"></Span>
+                            </FormattedString>
+                        </Label.FormattedText>
+                        <Label.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="RegisterLabel_Tapped"></TapGestureRecognizer>
+                        </Label.GestureRecognizers>
+                    </Label>
+                </StackLayout>
+            </Grid>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

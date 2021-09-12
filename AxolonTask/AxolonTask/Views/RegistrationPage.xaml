@@ -1,0 +1,62 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AxolonTask.Views.RegistrationPage"
+             BackgroundColor="Azure">
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout Padding="40" VerticalOptions="Center" HorizontalOptions="FillAndExpand">
+                <Image Source="AxolonLogo.png" VerticalOptions="Center" WidthRequest="100" HeightRequest="100">
+                </Image>
+                <Grid VerticalOptions="CenterAndExpand" Margin="20,0,20,0" >
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"></RowDefinition>
+                        <RowDefinition Height="Auto"></RowDefinition>
+                        <RowDefinition Height="Auto"></RowDefinition>
+                        <RowDefinition Height="Auto"></RowDefinition>
+                        <RowDefinition Height="Auto"></RowDefinition>
+                        <RowDefinition Height="Auto"></RowDefinition>
+                        <RowDefinition Height="Auto"></RowDefinition>
+                        <RowDefinition Height="Auto"></RowDefinition>
+                        <RowDefinition Height="Auto"></RowDefinition>
+                        <RowDefinition Height="Auto"></RowDefinition>
+                    </Grid.RowDefinitions>
+                    <StackLayout Grid.Row="1">
+                        <Entry x:Name="usernameRegEntry" WidthRequest="150" Placeholder="Username" FontSize="Small" TextColor="Black" PlaceholderColor="#004296"></Entry>
+                    </StackLayout>
+                    <StackLayout Grid.Row="3">
+                        <Entry x:Name="passwordRegEntry" WidthRequest="150" Placeholder="Password" FontSize="Small" IsPassword="True" TextColor="Black" PlaceholderColor="#004296"></Entry>
+                    </StackLayout>
+                    <StackLayout Grid.Row="5">
+                        <Entry x:Name="emailIdRegEntry" WidthRequest="150" Placeholder="Email-id" FontSize="Small" TextColor="Black" PlaceholderColor="#004296"></Entry>
+                    </StackLayout>
+                    <StackLayout Grid.Row="7">
+                        <Entry x:Name="phoneNumberRegEntry" WidthRequest="150" Placeholder="Phonenumber" FontSize="Small" TextColor="Black" PlaceholderColor="#004296"></Entry>
+                    </StackLayout>
+                    <StackLayout Grid.Row="9">
+                        <Button VerticalOptions="Center"
+                    Text="Register"
+                    TextColor="White"
+                    BackgroundColor="#004296"
+                                 BorderWidth="1.5"
+                    CornerRadius="50"
+                                      WidthRequest="100"
+                                       Clicked="Button_Clicked">
+                        </Button>
+                        <Label x:Name="loginLabel" HorizontalOptions="Center">
+                            <Label.FormattedText>
+                                <FormattedString>
+                                    <Span Text="Existing User?" TextColor="Black"/>
+                                    <Span Text="Login" TextColor="#004296" FontAttributes="Bold" TextDecorations="Underline"></Span>
+                                </FormattedString>
+                            </Label.FormattedText>
+                            <Label.GestureRecognizers>
+                                <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped"></TapGestureRecognizer>
+                            </Label.GestureRecognizers>
+                        </Label>
+                    </StackLayout>
+                </Grid>
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>
